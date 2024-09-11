@@ -1,20 +1,21 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
 
-body{
-    background: linear-gradient(#1a0415,#050126);
+body {
+    background: linear-gradient(#1a0415, #050126);
     height: 100vh;
     width: 100%;
     font-family: system-ui;
 }
-a{
+
+a {
     text-decoration: none;
     color: white;
 }
 
-header{
+header {
     position: fixed;
     width: 100%;
     z-index: 10;
@@ -25,33 +26,35 @@ header{
 
 }
 
-header .logo{
+header .logo {
     text-transform: uppercase;
     font-size: 30px;
 }
 
-ul li{
+ul li {
     display: inline-block;
     margin-right: 0 -5px;
     padding-right: 35px;
 }
 
-.nav{
+.nav {
     padding-right: 40px;
     margin-right: 30px;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
-header ul li a{
-    padding:6px 10px ;
+header ul li a {
+    padding: 6px 10px;
     border-radius: 20px;
 }
-header ul li a:hover ,.active{
+
+header ul li a:hover,
+.active {
     background: white;
     color: #050126;
 }
 
-.main{
+.main {
     position: relative;
     height: 100vh;
     width: 100%;
@@ -60,40 +63,41 @@ header ul li a:hover ,.active{
     align-items: center;
     overflow: hidden;
 }
-.main::after{
+
+.main::after {
     content: '';
     position: absolute;
     width: 100%;
     height: 7vh;
     bottom: 0;
-    background: linear-gradient(to top,#1a0415,transparent);
+    background: linear-gradient(to top, #1a0415, transparent);
 }
 
-.main img{
+.main img {
     position: absolute;
     height: 100vh;
     width: 100%;
     object-fit: cover;
 }
 
-#moon{
+#moon {
     mix-blend-mode: screen;
 }
 
 
-.content{
+.content {
     color: white;
     padding: 30px;
 }
-.content h2{
+
+.content h2 {
     margin: 20px;
     font-size: 30px;
 }
-.content p{
+
+.content p {
     margin: 10px;
 }
-
-
 
 
 .car {
@@ -104,17 +108,17 @@ header ul li a:hover ,.active{
 
 .car img {
     width: 550px;
-    height: 300px;
+    height: 330px;
     object-fit: cover;
-    transform: translate(-1600px, 100px);
+    transform: translate(-1700px, 100px);
 }
 
-#mountains7{
+#mountains7 {
 
     transform: translateY(90px);
 }
 
-#city{
+#city {
     transform: translateY(-10px);
 }
 
@@ -124,7 +128,89 @@ header ul li a:hover ,.active{
     height: 100%;
     position: relative;
 }
-.road img{
+
+.road img {
     height: 260px;
     transform: translateY(730px);
 }
+
+
+/**
+ * Responsive styles for the website, including adjustments for smaller screens and larger screens.
+ * The styles target the header, navigation, mountains, road, and car elements.
+ */
+ /* Media query for screens between 300px and 761px */
+@media (min-width: 300px) and (max-width: 761px) {
+
+    header {
+        margin: 10px;
+    }
+
+    header .logo {
+        font-size: 20px;
+    }
+
+    ul li {
+        margin-right: 0;
+        padding-right: 0;
+    }
+
+    .nav {
+        padding-right: 0;
+        margin-right: 15px;
+        margin-top: 10px;
+    }
+
+    header ul li a {
+        padding: 6px 5px;
+        border-radius: 20px;
+    }
+
+    #mountains7 {
+        transform: translateY(70px);
+    }
+
+    .road img,
+    .car img {
+        height: 260px;
+    }
+
+    .road img {
+        transform: translateY(735px);
+    }
+
+    .car img {
+        width: 550px;
+        height: 330px;
+        object-fit: cover;
+        transform: translate(-870px, 100px);
+    }
+}
+
+@media (min-width: 800px) and (max-width: 1030px) {
+
+    .road img,
+    .car img {
+        height: 260px;
+    }
+
+    .road img {
+        transform: translateY(835px);
+    }
+
+    .car img {
+        width: 550px;
+        height: 330px;
+        object-fit: cover;
+        transform: translate(-1020px, 100px);
+    }
+
+    #mountains7 {
+        transform: translateY(0);
+    }
+}
+
+
+
+
+
